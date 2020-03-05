@@ -8,3 +8,6 @@ if(x==y):
     print("Yes this is anagram")
 else:
     print("No Anagram data")
+
+
+    
