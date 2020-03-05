@@ -23,6 +23,7 @@ def binary_to_decimal(swaped_nibbles):
         dc=dc+pow(2,i)*val
         i+=1
     return dc
+#main()
 decimal=int(input("Enter the Number"))
 binary=decimal_to_binary(decimal) #function which is convert decimal data to binary
 print("decimal to Binary data")
