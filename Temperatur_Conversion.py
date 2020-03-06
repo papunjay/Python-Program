@@ -10,5 +10,6 @@ def switch():
     dictionary={1:fahrenheitt,
                 2:celsius }
     dictionary.get(option)()
-    
+
+ 
 switch()
