@@ -26,6 +26,14 @@ class LinkList:
             while temp!=None:
                 print(temp.data)
                 temp=temp.next
+    def Search_linkList(self,search_data):
+        temp=self.head
+        while(temp.next!=None or temp.data==search_data):
+            temp=temp.next
+        if(temp.next==None):
+            return 1
+        else:
+            return 0
 '''
     def Delete_node(self):
         if(self.data==None):
@@ -35,9 +43,19 @@ class LinkList:
             while temp.next.data!==user_data:
                 temp=temp.next
             '''
+str1=[]
+f = open('new_file.txt', 'r')
+str1=f.read().split()
 my_list=LinkList()
-my_list.Insert_Last(5)
-my_list.Insert_Last(8)
-my_list.Insert_Last(10)
-my_list.Insert_Last(16)
+for word in str1:
+    my_list.Insert_Last(word)
+print("Your Entered data is...")
 my_list.display()
+search_data=str(input("Enter the data for search"))
+result=my_list.Search_linkList(search_data)
+print(result)
+if(result==1):
+   my_list.Insert_Last(search_data)
+   
+my_list.display()
+
