@@ -16,11 +16,16 @@ class LinkList:
             while temp.next!=None:
                 temp=temp.next
             temp.next=newNode 
-              
+
     def Insert_at_position(self,search_data):
         newNode=node(search_data)
         temp=self.head
         prev=None
+        while temp!=None:
+            if( search_data <= temp.data):
+                newNode.next=temp
+                self.head=newNode
+                return
 
    
 list =[]
