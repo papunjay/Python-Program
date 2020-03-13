@@ -1,3 +1,9 @@
+def Factorial(Number):
+    res=1
+    for num in range(1,Number+1):
+        res*=num
+    return res
+    
 def Number_of_BST(Number):
     no_of_Node=Factorial(2*Number)//(Factorial(Number+1)*Factorial(Number))
     return no_of_Node
