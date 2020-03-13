@@ -8,7 +8,7 @@ def prime_fun(Number_range):
         if(checker==1):
             prime_data.append(Number)
     return prime_data
-    
+
 def check_anagram(prime_list):
     ana_list=[]
     for ith in prime_list:
@@ -23,3 +23,11 @@ def check_anagram(prime_list):
     return ana_list    
 Number_range=1000
 prime_list=prime_fun(Number_range)
+anagram_list=check_anagram(prime_list)
+TwoDArray=[]
+for ren in range(100,1000+1,100):
+    oneDArray=[]
+    for num in anagram_list:
+        if num<= ren and num>=ren-100:
+            oneDArray.append(num)
+    TwoDArray.append(oneDArray)
