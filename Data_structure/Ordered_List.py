@@ -30,6 +30,13 @@ class LinkList:
             elif(search_data>=temp.data and temp.next==None):
                 temp.next=newNode
                 return
+            elif(search_data>=temp.data and search_data<=temp.next.data):
+                prev=temp
+                newNode.next=temp.next
+                prev.next=newNode
+                return
+          
+            temp=temp.next
    
 list =[]
 f=open("file.txt","r")
