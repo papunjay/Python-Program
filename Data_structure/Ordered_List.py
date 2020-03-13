@@ -54,7 +54,17 @@ class LinkList:
         if temp==search_data:
             self.head=temp.next
             temp=None
-            return 
+            return
+
+        else:
+            temp=self.head
+            while temp!=None:
+                if(temp.data==search_data):
+                    break
+                prev=temp
+                temp=temp.next
+            prev.next=temp.next
+    
 
 list =[]
 f=open("file.txt","r")
