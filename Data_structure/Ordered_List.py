@@ -49,6 +49,8 @@ class LinkList:
                 temp=temp.next
                 if(temp==None):
                     return 0
+    def delete_search_data(self,search_data):  
+                      
 list =[]
 f=open("file.txt","r")
 for word in f.read().split():
