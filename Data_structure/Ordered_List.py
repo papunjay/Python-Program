@@ -50,7 +50,12 @@ class LinkList:
                 if(temp==None):
                     return 0
     def delete_search_data(self,search_data):  
-                      
+        temp=self.head
+        if temp==search_data:
+            self.head=temp.next
+            temp=None
+            return 
+
 list =[]
 f=open("file.txt","r")
 for word in f.read().split():
