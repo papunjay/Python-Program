@@ -5,7 +5,18 @@ class node:
 
 class LinkList:
     def __init__(self):
-        self.head=None        
+        self.head=None  
+
+    def Insert_Last(self,value):
+        newNode=node(value)
+        if(self.head==None):
+            self.head=newNode
+        else:
+            temp=self.head
+            while temp.next!=None:
+                temp=temp.next
+            temp.next=newNode   
+   
 list =[]
 f=open("file.txt","r")
 for word in f.read().split():
