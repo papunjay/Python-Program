@@ -26,3 +26,8 @@ days=[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 result=isLeapyear(year)
 if(result==True):
     days[1]=29
+print("{} {}".format(months[month-1],year))
+print("Su  Mo  Tu  We  Th  Fr  Sa")
+day=1
+count=0
+start_day=week_of_day(day,month,year)
