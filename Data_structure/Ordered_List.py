@@ -15,7 +15,13 @@ class LinkList:
             temp=self.head
             while temp.next!=None:
                 temp=temp.next
-            temp.next=newNode   
+            temp.next=newNode 
+              
+    def Insert_at_position(self,search_data):
+        newNode=node(search_data)
+        temp=self.head
+        prev=None
+
    
 list =[]
 f=open("file.txt","r")
