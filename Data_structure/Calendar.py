@@ -23,7 +23,7 @@ months=["January", "February", "March",
             "July", "August", "September",
             "October", "November", "December"]
 days=[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
+#week = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']
 result=isLeapyear(year)
 if(result==True):
     days[1]=29
