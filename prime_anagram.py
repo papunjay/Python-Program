@@ -20,7 +20,7 @@ def check_anagram(prime_list):
                         dist+=1
                 if(dist==0):
                     ana_list.append(int(ith))
-    return ana_list    
+    return ana_list
 Number_range=1000
 prime_list=prime_fun(Number_range)
 anagram_list=check_anagram(prime_list)
@@ -31,3 +31,5 @@ for ren in range(100,1000+1,100):
         if num<= ren and num>=ren-100:
             oneDArray.append(num)
     TwoDArray.append(oneDArray)
+for num in TwoDArray:
+    print(num)
