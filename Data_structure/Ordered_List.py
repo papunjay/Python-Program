@@ -64,6 +64,14 @@ class LinkList:
                 prev=temp
                 temp=temp.next
             prev.next=temp.next
+    def display(self):
+        if self.head==None:
+            print("Link list is empty")
+        else:
+            temp=self.head
+            while temp!=None:
+                print(temp.data)
+                temp=temp.next        
     
 
 list =[]
