@@ -5,5 +5,7 @@ class Deque:
         return self.items==[]
     def addRear(self,data):
         self.items.insert(0,data)
+    def removeFront(self):
+        return self.items.pop()
 string=str(input("Enter the string..."))
 result=palChecker(string)
