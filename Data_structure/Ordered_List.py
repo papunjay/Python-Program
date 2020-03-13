@@ -73,7 +73,13 @@ class LinkList:
                 print(temp.data)
                 temp=temp.next        
     
-
+    def LinkList_to_List(self):
+        list=[]
+        temp=self.head
+        while temp!=None:
+            list.append(temp.data)
+            temp=temp.next
+        return list
 list =[]
 f=open("file.txt","r")
 for word in f.read().split():
@@ -84,7 +90,7 @@ list=sorted(list)
 my_list=LinkList()
 for data in list:
     my_list.Insert_Last(data)
-    
+
 my_list.display()
 search_data=int(input("Enter the data for search... "))
 result=my_list.search_input(search_data)
@@ -92,3 +98,8 @@ if(result==1):
     my_list.delete_search_data(search_data)
 else:
     my_list.Insert_at_position(search_data)
+list_data=my_list.LinkList_to_List()
+file=open("file.txt","w")
+str1=" "
+file.write(str1.join(str(list_data)))
+my_list.display()
