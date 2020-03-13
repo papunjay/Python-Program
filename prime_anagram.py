@@ -8,6 +8,7 @@ def prime_fun(Number_range):
         if(checker==1):
             prime_data.append(Number)
     return prime_data
+    
 def check_anagram(prime_list):
     ana_list=[]
     for ith in prime_list:
