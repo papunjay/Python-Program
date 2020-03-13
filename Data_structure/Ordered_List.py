@@ -2,6 +2,10 @@ class node:
     def __init__(self,data):
         self.data=data
         self.next=None
+
+class LinkList:
+    def __init__(self):
+        self.head=None        
 list =[]
 f=open("file.txt","r")
 for word in f.read().split():
