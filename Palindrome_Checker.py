@@ -11,6 +11,7 @@ class Deque:
         return self.items.pop(0)
     def size(self):
         return len(self.items)
+
 def palChecker(string):
     chardeque=Deque()
     for ch in string:
@@ -22,6 +23,11 @@ def palChecker(string):
         if first!=last:
             check=False
     return check
-        
+
+
 string=str(input("Enter the string..."))
 result=palChecker(string)
+if(result==True):
+    print("palindrome")
+else:
+    print("Not palindrome")
