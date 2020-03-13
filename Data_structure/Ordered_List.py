@@ -37,7 +37,18 @@ class LinkList:
                 return
           
             temp=temp.next
-   
+
+    def search_input(self,search_data):
+        if(self.head==None):
+            print("LinkList data is empty")
+        else:
+            temp=self.head
+            while temp!=None:
+                if(temp.data==search_data):
+                    return 1
+                temp=temp.next
+                if(temp==None):
+                    return 0
 list =[]
 f=open("file.txt","r")
 for word in f.read().split():
