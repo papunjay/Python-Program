@@ -27,6 +27,9 @@ class LinkList:
                 self.head=newNode
                 return
 
+            elif(search_data>=temp.data and temp.next==None):
+                temp.next=newNode
+                return
    
 list =[]
 f=open("file.txt","r")
