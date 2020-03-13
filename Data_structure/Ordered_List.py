@@ -84,3 +84,11 @@ list=sorted(list)
 my_list=LinkList()
 for data in list:
     my_list.Insert_Last(data)
+    
+my_list.display()
+search_data=int(input("Enter the data for search... "))
+result=my_list.search_input(search_data)
+if(result==1):
+    my_list.delete_search_data(search_data)
+else:
+    my_list.Insert_at_position(search_data)
