@@ -9,5 +9,7 @@ class Deque:
         return self.items.pop()
     def removeRear(self):
         return self.items.pop(0)
+    def size(self):
+        return len(self.items)
 string=str(input("Enter the string..."))
 result=palChecker(string)
