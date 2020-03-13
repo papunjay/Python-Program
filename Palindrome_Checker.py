@@ -11,5 +11,17 @@ class Deque:
         return self.items.pop(0)
     def size(self):
         return len(self.items)
+def palChecker(string):
+    chardeque=Deque()
+    for ch in string:
+        chardeque.addRear(ch)
+    check=True
+    while chardeque.size() > 1 and check:
+        first=chardeque.removeFront()
+        last=chardeque.removeRear()
+        if first!=last:
+            check=False
+    return check
+        
 string=str(input("Enter the string..."))
 result=palChecker(string)
