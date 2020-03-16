@@ -15,3 +15,4 @@ for value in data:
     print("Total_value:=",total_price)
     print("-----Inventory Details-------")
 
+    
