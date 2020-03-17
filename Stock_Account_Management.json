@@ -1,7 +1,27 @@
-
 [
-    {"name":"Rice" ,"weight":50,"price per kg":100},
-    {"name":"Pulses","weight":15,"price per kg":200},
-    {"name":"Wheats","weight":20,"price per kg":50}
-    
+    {
+        "Stock Names":"Rahul" ,
+        "Number of Share":10,
+        "Share Price":20
+    },
+    {
+        "Stock Names":"sharma" ,
+        "Number of Share":20,
+        "Share Price":30
+    },
+    {
+        "Stock Names":"Abhishek" ,
+        "Number of Share":50,
+        "Share Price":50
+    },
+    {
+        "Stock Names":"kumar" ,
+        "Number of Share":60,
+        "Share Price":70
+    },
+    {
+        "Stock Names":"Abcd" ,
+        "Number of Share":80,
+        "Share Price":23
+    }
 ]
