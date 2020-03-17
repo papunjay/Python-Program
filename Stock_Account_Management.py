@@ -4,7 +4,7 @@ stack_details=json.load(file)
 file.close()
 N=int(input("Enter the number of stock..."))
 print("\n")
- 
+count = 1   
 for value in stack_details:
     total_value=0 
     print("Stock Name:",value['Stock Names'])
@@ -15,4 +15,6 @@ for value in stack_details:
     total_value=no_of_share*share_price
     print("Total",total_value)
     print("\n")
- 
+    count+=1  
+    if(count > N):  
+        break  
