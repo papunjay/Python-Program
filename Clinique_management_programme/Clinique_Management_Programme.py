@@ -80,7 +80,31 @@ class ClinicManagement:
                         print("Your appointment is fixed. Thank You !")
                     else:
                         print("Sorry. Doctor is not available at the Moment !! ")
-
+    
+    def doctorSearchById(self):
+        doct = self.doctorInformation()
+        doctors = doct['doctors']
+        id = int(input("Enter doctor Id :"))
+        for i in range(len(doct)):
+            if doctors[i]["Id"] == id:
+                print("Congrats Doctor is available..!!")
+                break
+            else:
+                print("Sorry Doctor is not available..!!")
+                break
+    def doctorSearchBySpclzn(self):
+        doct=self.DoctorInformation()
+        doctors=doct['doctors']
+        Spec=(input("Enter doctor name you want to search:"))
+        for i in range(len(doct)):
+            if Spec == doctors[i]["specialization"]:
+                print("Congratulations Doctor is available..!!")
+                break
+            else:
+                print("Sorry Doctor is not available..!!")
+                break
+    
+    
     def users(self):
         question=int(input("Press \n 1.Managment \n 2.Patient "))
         if question == 1:
