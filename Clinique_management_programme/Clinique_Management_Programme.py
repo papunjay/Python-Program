@@ -1,5 +1,13 @@
 class ClinicManagement:
-    
+    def __init__(self):
+        pass
+
+    def DoctorInformation(self):
+        file=open("doctor.json","r")
+        f1=file.read(file)
+        doc_info=json.loads(f1)
+        return doc_info
+ 
     def users(self):
         question=int(input("Press \n 1.Managment \n 2.Patient "))
         if question == 1:
