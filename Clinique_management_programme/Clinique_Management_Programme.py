@@ -1,3 +1,4 @@
+import json
 class ClinicManagement:
 
     def __init__(self):
@@ -35,17 +36,17 @@ class ClinicManagement:
             print('',count,'\t\t',name ,'\t\t',spcl)
 
     def patientInformation(self):
-        file=open("petients.json","r+")
+        file=open("patients.json","r+")
         f=file.read() 
         json_pent=json.loads(f)
-        f.case()
+       # f.close()
         return json_pent
-
+    
     def appointment(self):
-        file=open("appointment.json","r+")
+        file=open("appointments.json","r+")
         f1=file.read()
         json_app=json.loads(f1)
-        f1.close()
+       # f1.close()
         return json_app
     
     def addAppointment(self):
@@ -115,13 +116,13 @@ class ClinicManagement:
                 print("Doctor is not available..!!")
                 break
 
-    def users(self):
+    def Users(self):
         print("------------------- Hospital Management -------------------\n")
         yn = input("Do you Want to Acess? (Y/N)")
         while (yn == 'y') or (yn == 'Y') or (yn == 'Yes') or (yn == 'yes'):
             question=int(input("Press \n 1.Managment \n 2.Patient "))
             if question == 1:
-                code=int(input("Enter the security code"))
+                code=int(input("Enter the security code   ."))
                 if code == 12345:
                     choice = int(input("Press \n 1. Add doctor \n 2. View doctor \n 3. Go back\n"))
                     if choice == 1:
@@ -150,7 +151,8 @@ class ClinicManagement:
                     if option == 3:
                         self.doctorSearchByName()
                         break
-            
+
+# main_function
 if __name__ == '__main__':
     ClMg = ClinicManagement()
     patient = ClMg.patientInformation()

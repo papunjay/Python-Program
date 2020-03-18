@@ -58,17 +58,6 @@
           "pMobNumber": "8956345213",
           "Time": "AM"
         }
-    ],
-    "Dr. Sai Kumar":
-    [
-        {
-          "pName": "Sathya Sai",
-          "Id": 08,
-          "pAge": 24,
-          "pMobNumber": "8956345213",
-          "Time": "AM"
-        }
     ]
-
-
+    
 }
