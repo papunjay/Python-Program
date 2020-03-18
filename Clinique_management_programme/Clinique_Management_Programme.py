@@ -103,40 +103,53 @@ class ClinicManagement:
             else:
                 print("Sorry Doctor is not available..!!")
                 break
-    
-    
+    def doctorSearchByName(self):
+        doct = self.doctorInformation()
+        doctors = doct['doctors']
+        name = (input("Enter the Doctor name that you want to Search:"))
+        for i in range(len(doct)):
+            if name == doctors[i]["name"]:
+                print("Doctor is available..!!")
+                break
+            else:
+                print("Doctor is not available..!!")
+                break
+
     def users(self):
-        question=int(input("Press \n 1.Managment \n 2.Patient "))
-        if question == 1:
-            code=int(input("Enter the security code"))
-            if code == 12345:
-                choice = int(input("Press \n 1. Add doctor \n 2. View doctor \n 3. Go back\n"))
+        print("------------------- Hospital Management -------------------\n")
+        yn = input("Do you Want to Acess? (Y/N)")
+        while (yn == 'y') or (yn == 'Y') or (yn == 'Yes') or (yn == 'yes'):
+            question=int(input("Press \n 1.Managment \n 2.Patient "))
+            if question == 1:
+                code=int(input("Enter the security code"))
+                if code == 12345:
+                    choice = int(input("Press \n 1. Add doctor \n 2. View doctor \n 3. Go back\n"))
+                    if choice == 1:
+                        self.addDoctor()
+                        break
+                    if choice == 2:
+                        self.displayDoct()
+                        break
+                    if choice == 3:
+                        yn == 3
+                else:
+                    print("Wrong input")
+            if question == 2:
+                choice = int(input("Press \n 1. Add oppintment \n 2. search doctor \n 3. Go back"))
                 if choice == 1:
-                    self.addDoctor()
+                    self.addAppointment()
                     break
                 if choice == 2:
-                    self.displayDoct()
-                    break
-                if choice == 3:
-                    yn == 3
-            else:
-                print("Wrong input")
-        if question == 2:
-            choice = int(input("Press \n 1. Add oppintment \n 2. search doctor \n 3. Go back"))
-            if choice == 1:
-                self.addAppointment()
-                    break
-            if choice == 2:
-                option = int(input("Press \n 1. Seach by ID \n 2. Search by Specalization \n 3. Seach by Name\n"))
-                if option == 1:
-                    self.doctorSearchById()
-                    break
-                if option == 2:
-                    self.doctorSearchBySpclzn()
-                    break
-                if option == 3:
-                    self.doctorSearchByName()
-                    break
+                    option = int(input("Press \n 1. Seach by ID \n 2. Search by Specalization \n 3. Seach by Name\n"))
+                    if option == 1:
+                        self.doctorSearchById()
+                        break
+                    if option == 2:
+                        self.doctorSearchBySpclzn()
+                        break
+                    if option == 3:
+                        self.doctorSearchByName()
+                        break
             
 if __name__ == '__main__':
     ClMg = ClinicManagement()
