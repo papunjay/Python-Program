@@ -1,10 +1,10 @@
 class ClinicManagement:
-    
+
     def __init__(self):
         pass
 
     def DoctorInformation(self):
-        file=open("doctor.json","r")
+        file=open("doctor.json","r+")
         f1=file.read(file)
         doc_info=json.loads(f1)
         return doc_info
@@ -33,15 +33,21 @@ class ClinicManagement:
             spcl=doctors[i]['spwcialization']
             count+=1
             print('',count,'\t\t',name ,'\t\t',spcl)
-                   
-    def addAppointment():
-        
-    def doctorSearchById():
-    
-    def doctorSearchBySpclzn():
-    
-    def doctorSearchByName():
 
+    def patientInformation(self):
+        file=open("petients.json","r+")
+        f=file.read() 
+        json_pent=json.loads(f)
+        f.case()
+        return json_pent
+
+    def appointment(self):
+        file=open("appointment.json","r+")
+        f1=file.read()
+        json_app=json.loads(f1)
+        f1.close()
+        return json_app
+        
     def users(self):
         question=int(input("Press \n 1.Managment \n 2.Patient "))
         if question == 1:
