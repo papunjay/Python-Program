@@ -22,6 +22,18 @@ class ClinicManagement:
         file.write(json.dump(json_f,indent=2))
         print("Record Inserted Successfully")
     
+    def displayDoct(self):
+        count=0
+        doct=self.DoctorInformation()
+        doctors= doct['doctor']
+        print(" Doctors Details \n Serial No \t\t Name \t\t\t\t\t Specialization ")
+        for i in range(len(doctors)):
+            name=doctors[i]['name']
+            spcl=doctors[i]['spwcialization']
+            count+=1
+            print('',count,'\t\t',name ,'\t\t',spcl)
+                   
+   
 
     def users(self):
         question=int(input("Press \n 1.Managment \n 2.Patient "))
