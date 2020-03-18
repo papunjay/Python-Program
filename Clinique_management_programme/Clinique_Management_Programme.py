@@ -81,8 +81,6 @@ class ClinicManagement:
                     else:
                         print("Sorry. Doctor is not available at the Moment !! ")
 
-
-
     def users(self):
         question=int(input("Press \n 1.Managment \n 2.Patient "))
         if question == 1:
