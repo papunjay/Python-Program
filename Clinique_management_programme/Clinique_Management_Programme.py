@@ -47,7 +47,42 @@ class ClinicManagement:
         json_app=json.loads(f1)
         f1.close()
         return json_app
-        
+    
+    def addAppointment(self):
+        doct=self.DoctorInformation()
+        doctors=doct['doctors']
+        for i in range(len(doctors)):
+            name = doctors[i]['name']
+            spclzn = doctors[i]['specialization']
+            available = doctors[i]['availability']
+            print(name, '    ', spclzn, '    ', available, '    ')
+        doctName=input("Enter the Doctor Name")
+        time = input("Availability time (AM/PM/BOTH)")
+        appointmentDict = self.appointment()  
+        appointmentList = appointmentDict[doctName] 
+        print("Appointment list is ", appointmentList)
+        if len(appointmentList) <=5:
+            for i in range(len(doctors)):
+                if doctors[i]["name"] == doctName:
+                    if time.upper() == doctors[i]["availability"]:
+                        print("Doctor is Available..!! Please Enter the patient details:")
+                        name = input(" Enter pName:")
+                        id = int(input(" Enter patient Id:"))
+                        age = int(input(" Enter patient age:"))
+                        mob_no = input(" Enter patient's pMobNumber:")
+                        file=open('appointments.json','r')
+                        f=file.read()
+                        jsonfile=json.loads(f)
+                        new_data = new_dict = {"pName": name, "Id": id, "pAge": age, "pMobNumber": mob_no, "Time": time}
+                        file=open("appointments.json","a+")
+                        jsonfile[doctors].append(new_data)
+                        file.write(json.dumps(jsonfile,indent=2))
+                        print("Your appointment is fixed. Thank You !")
+                    else:
+                        print("Sorry. Doctor is not available at the Moment !! ")
+
+
+
     def users(self):
         question=int(input("Press \n 1.Managment \n 2.Patient "))
         if question == 1:
