@@ -7,7 +7,22 @@ class ClinicManagement:
         f1=file.read(file)
         doc_info=json.loads(f1)
         return doc_info
- 
+        
+    def addDoctor(self):
+        docName=str(input("Enter the doctor Name:\n"))
+        docId=int(input("Enter the Doctor ID:\n"))
+        dSpcl=str(input(" Enter specialization: \n"))
+        dAvil=str(input("Enter avilablity in (AM/PM/BOTH): \n"))
+        file=open("doctor.json","r")
+        f1=file.read()
+        json_f=json.loads(f1)
+        new_doc={"name":docName,"id":docId,"specialization":dSpcl,"availability": dAvil}
+        file=open("doctor.json","w")
+        json_f['doctor'].append(new_doc)
+        file.write(json.dump(json_f,indent=2))
+        print("Record Inserted Successfully")
+    
+
     def users(self):
         question=int(input("Press \n 1.Managment \n 2.Patient "))
         if question == 1:
