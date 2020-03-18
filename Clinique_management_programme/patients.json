@@ -1,0 +1,29 @@
+{
+    "patients":
+    [
+        {
+            "name":"",
+            "Id":12,
+            "Age":24,
+            "mobile number":8709033588
+        },
+        {
+            "Name": "Noothan",
+            "Id": 12,
+            "Age": 34,
+            "mobile number": 9083423431
+        },
+        {
+            "Name": "Gulzar",
+            "Id": 14,
+            "Age": 22,
+            "mobile number":8976232123
+        },
+        {
+            "Name": "Sabiha",
+            "Id": 15,
+            "Age": 23,
+            "mobile number": 8978412761
+        }
+    ]
+}
