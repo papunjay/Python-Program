@@ -1,4 +1,5 @@
 class ClinicManagement:
+    
     def __init__(self):
         pass
 
@@ -33,7 +34,13 @@ class ClinicManagement:
             count+=1
             print('',count,'\t\t',name ,'\t\t',spcl)
                    
-   
+    def addAppointment():
+        
+    def doctorSearchById():
+    
+    def doctorSearchBySpclzn():
+    
+    def doctorSearchByName():
 
     def users(self):
         question=int(input("Press \n 1.Managment \n 2.Patient "))
