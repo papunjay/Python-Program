@@ -53,3 +53,18 @@ class Stack:
 		else: 
 			return self.head.data 
 	
+    	# Prints out the stack	
+	
+	def display1(self): 
+		
+		iternode = self.head 
+		if self.isempty(): 
+			print("Stack Underflow") 
+		
+		else: 
+			
+			while(iternode != None): 
+				
+				print("Shares: ", iternode.data," ",end = " ") 
+				iternode = iternode.next
+			return
