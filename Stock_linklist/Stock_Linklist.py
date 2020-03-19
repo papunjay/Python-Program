@@ -94,8 +94,68 @@ def check(inp):
     except ValueError:
         print("Invalid Entry!! \n Please Enter the proper Entry ")
 
+
 if __name__ == '__main__':
 
     MyStack = Stack() 
     name = Stack()
     company = Stack()
+    try :
+        n = input(" Enter your Name: ")
+        name.push(n)
+
+        Company = input(" Enter the Company Name: ")
+        company.push(Company)
+        while True:
+            Shares = int(input(" Enter the first stock Amount: "))
+            MyStack.push(Shares)
+            inp = input(" Want to  Purchased ? (y/n) ")
+            while check(inp):
+                Shares = int(input(" Enter the Amount Amount: "))
+                MyStack.push(Shares)
+                name.display()
+                print()
+                company.display()
+                print()
+                MyStack.display1()                
+                print()
+                
+                inp = input(" Want to  Purchased again? (y/n) ")
+                if check(inp):
+                    Shares = int(input(" Enter the Amount: "))
+                    MyStack.push(Shares)
+
+                    name.display()
+                    print()
+                    company.display()
+                    print()
+                    MyStack.display1()                
+                    print()                    
+
+                    break
+                    
+            dl = input(" Want to sold the  ? (y/n) ")
+            if check(dl):
+                print(" List of stock Before sold : \n")
+                MyStack.display1()
+                print("\nTop Share is ",MyStack.peek()) 
+                MyStack.pop()
+                print(" List of stock After deleting : \n")
+                MyStack.display1()
+            else:
+                print(" List of stock Before Adding the New : \n")
+                MyStack.display1()
+                Shares = int(input(" Enter the  Purchased  Amount: "))
+                print("\nTop stock is ",MyStack.peek()) 
+                MyStack.push(Shares)
+                print(" List of stock After Adding the New : \n")
+                MyStack.display1()
+                break
+                
+    except ValueError:
+        print(" Enter the proper Value ")
+        print(" Please try Again by running this Software ")
+    except KeyboardInterrupt:
+        print(" Force Quit ")
+        print(" Please try Again by running this Software ")
+        print(" Bye!! ")
