@@ -18,3 +18,14 @@ class Stack:
 			return True
 		else: 
 			return False
+    
+    # adds to the start of the stack 
+	def push(self,data): 
+		
+		if self.head == None: 
+			self.head=Node(data) 
+			
+		else: 
+			newnode = Node(data) 
+			newnode.next = self.head 
+			self.head = newnode 
