@@ -68,3 +68,27 @@ class Stack:
 				print("Shares: ", iternode.data," ",end = " ") 
 				iternode = iternode.next
 			return
+
+    def display(self): 
+		
+		iternode = self.head 
+		if self.isempty(): 
+			print("Stack Underflow") 
+		
+		else: 
+			
+			while(iternode != None): 
+				
+				print(iternode.data," ",end = " ") 
+				iternode = iternode.next
+			return
+    
+    def check(inp):
+
+    try:
+        if (inp == "y") or (inp == "Y") or (inp == "yes") or (inp == "Yes"):
+            return 1
+        else:
+            return 0
+    except ValueError:
+        print("Invalid Entry!! \n Please Enter the proper Entry ")
