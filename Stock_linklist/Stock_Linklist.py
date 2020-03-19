@@ -11,3 +11,10 @@ class Stack:
 	# head is default NULL 
 	def __init__(self): 
 		self.head = None
+    
+    # Checks if stack is empty 
+	def isempty(self): 
+		if self.head == None: 
+			return True
+		else: 
+			return False
