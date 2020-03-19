@@ -29,3 +29,18 @@ class Stack:
 			newnode = Node(data) 
 			newnode.next = self.head 
 			self.head = newnode 
+    
+    # Remove element that is the current head (start of the stack) 
+	def pop(self): 
+		
+		if self.isempty(): 
+			return None
+			
+		else: 
+			# Removes the head node and makes 
+			#the preceeding one the new head 
+			poppednode = self.head 
+			self.head = self.head.next
+			poppednode.next = None
+			return poppednode.data 
+	
