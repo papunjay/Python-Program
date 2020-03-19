@@ -44,3 +44,12 @@ class Stack:
 			poppednode.next = None
 			return poppednode.data 
 	
+    # Returns the head node data 
+	def peek(self): 
+		
+		if self.isempty(): 
+			return None
+			
+		else: 
+			return self.head.data 
+	
